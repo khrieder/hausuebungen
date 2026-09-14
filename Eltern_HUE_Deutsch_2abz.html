@@ -73,6 +73,9 @@
             color: #475569;
             border: 1px solid rgba(71, 85, 105, 0.15);
         }
+        .hue-prefix {
+            display: none;
+        }
         @media (max-width: 640px) {
             body {
                 padding: 12px;
@@ -110,20 +113,17 @@
                 text-align: left;
                 display: block;
             }
+            .hue-prefix {
+                display: inline;
+                font-weight: 700;
+                color: #2563eb;
+            }
             td:nth-of-type(1) {
-                display: flex;
-                align-items: center;
-                gap: 6px;
                 border-bottom: 1px solid #f1f5f9;
                 padding-bottom: 8px;
                 margin-bottom: 8px;
                 font-size: 1.05rem;
                 color: #0f172a;
-            }
-            td:nth-of-type(1):before {
-                content: "Haus\00FCbung Nr.";
-                font-weight: 700;
-                color: #2563eb;
             }
             td:nth-of-type(2) {
                 font-size: 0.95rem;
@@ -162,7 +162,7 @@
     <div class="container">
         <h1>
             <span>&#128218; Haus&uuml;bungen - Deutsch 2abz</span>
-            <span class="last-update">Stand: 14.09.2026 19:58</span>
+            <span class="last-update">Stand: 14.09.2026 20:32</span>
         </h1>
         <table>
             <thead>
@@ -175,7 +175,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td><strong>1</strong></td><td>Arbeitsblatt "Lügendetektor-Steckbrief 2abz". Schreibe vier Sätze mit jeweils mindestens acht Wörtern. Drei davon sollten wahr sein, einer davon sollte gelogen sein. Unterstreiche in allen Sätzen die Nomen blau, die Verben rot und die Adjektive grün.</td><td>14.09.2026</td><td>15.09.2026</td><td><span class='badge active'>Offen</span></td></tr>
+                <tr><td><span class='hue-prefix'>Haus&uuml;bung Nr. </span><strong>1</strong></td><td>Arbeitsblatt "Lügendetektor-Steckbrief 2abz". Schreibe vier Sätze mit jeweils mindestens acht Wörtern. Drei davon sollten wahr sein, einer davon sollte gelogen sein. Unterstreiche in allen Sätzen die Nomen blau, die Verben rot und die Adjektive grün.</td><td>14.09.2026</td><td>15.09.2026</td><td><span class='badge active'>Offen</span></td></tr>
 
             </tbody>
         </table>
