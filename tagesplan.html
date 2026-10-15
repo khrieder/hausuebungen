@@ -12,6 +12,18 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <script>
+        (function() {
+            var now = Date.now();
+            var search = window.location.search;
+            var match = search.match(/[?&]_t=(\d+)/);
+            var t = match ? parseInt(match[1], 10) : 0;
+            if (!t || (now - t) > 45000) {
+                var newSearch = search ? (search.indexOf('_t=') !== -1 ? search.replace(/([?&])_t=\d+/, '$1_t=' + now) : search + '&_t=' + now) : '?_t=' + now;
+                window.location.replace(window.location.pathname + newSearch + window.location.hash);
+            }
+        })();
+    </script>
     <style>
         :root {
             --bg-body: #f8fafc;
