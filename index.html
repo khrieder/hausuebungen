@@ -3,6 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <script>
+        (function() {
+            var now = Date.now();
+            var search = window.location.search;
+            var match = search.match(/[?&]_t=(\d+)/);
+            var t = match ? parseInt(match[1], 10) : 0;
+            if (!t || (now - t) > 45000) {
+                var newSearch = search ? (search.indexOf('_t=') !== -1 ? search.replace(/([?&])_t=\d+/, '$1_t=' + now) : search + '&_t=' + now) : '?_t=' + now;
+                window.location.replace(window.location.pathname + newSearch + window.location.hash);
+            }
+        })();
+    </script>
     <title>Haus&uuml;bungen Deutsch - NMS B&ouml;heimkirchen</title>
     <style>
         body {
@@ -110,7 +125,7 @@
         </div>
 
         <div class="footer">
-            Stand: 16.10.2026 06:46 Uhr &bull; Automatisch synchronisiert
+            Stand: 16.10.2026 08:31 Uhr &bull; Automatisch synchronisiert <a href="javascript:location.replace(location.pathname+'?_t='+Date.now())" style="text-decoration:none; margin-left:6px;" title="Jetzt live aktualisieren">&#128260;</a>
         </div>
     </div>
 </body>
